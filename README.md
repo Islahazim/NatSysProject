@@ -55,9 +55,9 @@ Team Mates:
 
 ***Questions:***
 
-1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** __Fill answer here__.
-2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** __Fill answer here__.
-3. Why must we commit and sync our current work on source control? ***(1 mark)*** __Fill answer here__.
+1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** Ubuntu Linux
+2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** 2 cores, 8 GB RAM, and 32 GB storage, up to 32 cores, 64 GB RAM, and 128 GB storage.
+3. Why must we commit and sync our current work on source control? ***(1 mark)*** To keeps a record of changes, makes code reviews and project management more efficient
 
 ## Exploring the Terminal
 
@@ -74,17 +74,216 @@ codespace
 
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
-1. Run the command **pwd** . ***(1 mark)*** __Fill answer here__.
-2. Run the command **cat /etc/passwd** . ***(1 mark)*** __Fill answer here__.
-3. Run the command **df** . ***(1 mark)*** __Fill answer here__.
-4. Run the command **du** . ***(1 mark)*** __Fill answer here__.
-5. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
-6. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
-7. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
-8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
-9. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
-10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
-11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
+1. Run the command **pwd** . ***(1 mark)*** 
+2. Run the command **cat /etc/passwd** . ***(1 mark)*** 
+3. Run the command **df** . ***(1 mark)*** 
+4. Run the command **du** . ***(1 mark)*** 
+5. Run the command **ls** . ***(1 mark)*** 
+6. Run the command **ls -asl** . ***(1 mark)***
+7. Run the command **free -h** . ***(1 mark)*** 
+8. Run the command **cat /proc/cpuinfo** . ***(1 mark)***
+9. Run the command **top** and type **q** to quit. ***(1 mark)*** 
+10. Run the command **uname -a**. ***(1 mark)***
+```bash
+@Islahazim ➜ /workspaces/NatSysProject (main) $ whoami
+codespace
+@Islahazim ➜ /workspaces/NatSysProject (main) $ pwd
+/workspaces/NatSysProject
+@Islahazim ➜ /workspaces/NatSysProject (main) $ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:101:101:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+systemd-network:x:102:103:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
+codespace:x:1000:1000::/home/codespace:/bin/bash
+sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
+@Islahazim ➜ /workspaces/NatSysProject (main) $ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+overlay         32847680 14451788  16701792  47% /
+tmpfs              65536        0     65536   0% /dev
+shm                65536        8     65528   1% /dev/shm
+/dev/root       30298176 21797920   8483872  72% /vscode
+/dev/sdb1       46127956      104  43752276   1% /tmp
+/dev/loop4      32847680 14451788  16701792  47% /workspaces
+@Islahazim ➜ /workspaces/NatSysProject (main) $ du
+1972    ./images
+8       ./.git/objects/60
+12      ./.git/objects/ff
+8       ./.git/objects/c6
+8       ./.git/objects/4b
+8       ./.git/objects/41
+12      ./.git/objects/d2
+8       ./.git/objects/d8
+8       ./.git/objects/e7
+12      ./.git/objects/2e
+8       ./.git/objects/4a
+8       ./.git/objects/7b
+16      ./.git/objects/fb
+8       ./.git/objects/fe
+12      ./.git/objects/6e
+8       ./.git/objects/fa
+12      ./.git/objects/1c
+8       ./.git/objects/6f
+8       ./.git/objects/f2
+8       ./.git/objects/5b
+1820    ./.git/objects/pack
+12      ./.git/objects/70
+12      ./.git/objects/64
+12      ./.git/objects/44
+8       ./.git/objects/74
+8       ./.git/objects/0d
+8       ./.git/objects/cb
+8       ./.git/objects/58
+12      ./.git/objects/14
+8       ./.git/objects/3f
+12      ./.git/objects/3d
+12      ./.git/objects/af
+8       ./.git/objects/f6
+8       ./.git/objects/83
+8       ./.git/objects/91
+8       ./.git/objects/b2
+8       ./.git/objects/3a
+12      ./.git/objects/73
+8       ./.git/objects/93
+8       ./.git/objects/b6
+8       ./.git/objects/a6
+8       ./.git/objects/71
+8       ./.git/objects/a3
+8       ./.git/objects/04
+8       ./.git/objects/2a
+8       ./.git/objects/eb
+8       ./.git/objects/fc
+8       ./.git/objects/0e
+8       ./.git/objects/49
+8       ./.git/objects/4f
+8       ./.git/objects/c3
+8       ./.git/objects/81
+12      ./.git/objects/72
+12      ./.git/objects/a1
+8       ./.git/objects/0b
+8       ./.git/objects/1b
+12      ./.git/objects/13
+12      ./.git/objects/ca
+8       ./.git/objects/f9
+4       ./.git/objects/info
+8       ./.git/objects/52
+8       ./.git/objects/20
+8       ./.git/objects/86
+8       ./.git/objects/fd
+8       ./.git/objects/cd
+12      ./.git/objects/62
+12      ./.git/objects/b5
+12      ./.git/objects/e5
+12      ./.git/objects/17
+8       ./.git/objects/e9
+8       ./.git/objects/47
+8       ./.git/objects/24
+8       ./.git/objects/96
+8       ./.git/objects/b9
+8       ./.git/objects/ab
+2492    ./.git/objects
+4       ./.git/lfs/tmp
+8       ./.git/lfs
+4       ./.git/refs/tags
+8       ./.git/refs/heads
+8       ./.git/refs/remotes/origin
+12      ./.git/refs/remotes
+28      ./.git/refs
+8       ./.git/info
+8       ./.git/logs/refs/heads
+8       ./.git/logs/refs/remotes/origin
+12      ./.git/logs/refs/remotes
+24      ./.git/logs/refs
+32      ./.git/logs
+64      ./.git/hooks
+4       ./.git/branches
+2668    ./.git
+4660    .
+@Islahazim ➜ /workspaces/NatSysProject (main) $ ls
+README.md  images
+@Islahazim ➜ /workspaces/NatSysProject (main) $ ls -asl
+total 32
+ 4 drwxrwxrwx+ 4 codespace root  4096 May 18 03:38 .
+ 4 drwxr-xrwx+ 5 codespace root  4096 May 18 03:38 ..
+ 4 drwxrwxrwx+ 9 codespace root  4096 May 18 04:01 .git
+16 -rw-rw-rw-  1 codespace root 12897 May 18 04:04 README.md
+ 4 drwxrwxrwx+ 2 codespace root  4096 May 18 03:38 images
+@Islahazim ➜ /workspaces/NatSysProject (main) $ free -h
+              total        used        free      shared  buff/cache   available
+Mem:          7.7Gi       1.8Gi       222Mi       1.0Mi       5.8Gi       5.7Gi
+Swap:            0B          0B          0B
+@Islahazim ➜ /workspaces/NatSysProject (main) $ cat /proc/cpuinfo
+processor       : 0
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3236.942
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+top - 04:07:11 up  3:22,  0 users,  load average: 0.29, 0.21, 0.22
+Tasks:  21 total,   1 running,  20 sleeping,   0 stopped,   0 zombie
+top - 04:07:23 up  3:22,  0 users,  load average: 0.22, 0.20, 0.22
+Tasks:  18 total,   1 running,  17 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.2 us,  3.5 sy,  0.0 ni, 93.0 id,  0.2 wa,  0.0 hi,  0.2 si,  0.0 st
+MiB Mem :   7929.6 total,    171.0 free,   1855.9 used,   5902.6 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5757.6 avail Mem 
+
+@Islahazim ➜ /workspaces/NatSysProject (main) $
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                  
+   2170 codespa+  20   0   21.1g 354016  46464 S   1.3   4.4   0:46.56 node                     
+   2130 codespa+  20   0  961448 100076  42112 S   0.3   1.2   0:06.80 node                     
+   2677 codespa+  20   0  727164  62452  38528 S   0.3   0.8   0:02.22 node                     
+      1 codespa+  20   0    1136    640    640 S   0.0   0.0   0:00.05 docker-init              
+      7 codespa+  20   0    7236   1664   1664 S   0.0   0.0   0:00.00 sleep                    
+     70 root      20   0   12196   3352   2432 S   0.0   0.0   0:00.00 sshd                     
+    786 root      20   0 1463360  86888  50304 S   0.0   1.1   0:00.24 dockerd                  
+    793 root      20   0 1798012  44752  30336 S   0.0   0.6   0:00.46 containerd               
+   1502 codespa+  20   0    2616   1536   1536 S   0.0   0.0   0:00.01 sh                       
+   1581 root      20   0    2616   1664   1664 S   0.0   0.0   0:00.00 sh                       
+   2122 codespa+  20   0    2624   1536   1536 S   0.0   0.0   0:00.01 sh                       
+   2226 codespa+  20   0  851240  59140  38784 S   0.0   0.7   0:00.32 node                     
+   3164 codespa+  20   0  623004  76872  38144 S   0.0   0.9   0:01.65 node                     
+   3630 codespa+  20   0    2616   1536   1536 S   0.0   0.0   0:00.00 sh                       
+   3674 root      20   0    2616   1408   1408 S   0.0   0.0   0:00.00 sh                       
+   3887 codespa+  20   0   16632  11520   3456 S   0.0   0.1   0:00.18 bash                     
+   5704 codespa+  20   0  606200  52824  34560 S   0.0   0.7   0:00.23 node                     
+  15262 codespa+  20   0   10896   3584   3072 R   0.0   0.0   0:00.00 top                      
+
+@Islahazim ➜ /workspaces/NatSysProject (main) $ uname -a
+Linux codespaces-5cd2ef 6.5.0-1019-azure #20~22.04.1-Ubuntu SMP Wed Apr  3 03:28:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
+11. What is the available free memory in the system. ***(1 mark)*** 
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
 14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
