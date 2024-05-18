@@ -331,7 +331,8 @@ root@f65be1987f84:~# nano helloworld.txt
 
 5. Edit your helloworld.txt, create your messsage and save by typing ctrl-X. Once saved, explore using the container to see where the file is located. Then exit the shell, by typing **exit**.
 
-6. Stop the container and run **docker ps -a**, and restart the container again. Is your file in the container still available?
+6. Stop the container and run **docker ps -a**, and restart the container again. Is your file in the container still available? Yes
+
 ```bash 
 @joeynor ➜ /workspaces/OSProject (main) $ docker stop romantic_jackson
 
@@ -340,6 +341,19 @@ CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                      
 f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             romantic_jackson
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker restart romantic_jackson
+```
+YES
+```bash 
+@Islahazim ➜ /workspaces/NatSysProject (main) $ docker stop magical_dijkstra
+magical_dijkstra
+@Islahazim ➜ /workspaces/NatSysProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS                        PORTS     NAMES
+2fa6019c4189   debian    "bash"    4 minutes ago   Exited (137) 12 seconds ago             magical_dijkstra
+@Islahazim ➜ /workspaces/NatSysProject (main) $ docker restart magical_dijkstra
+magical_dijkstra
+@Islahazim ➜ /workspaces/NatSysProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS          PORTS     NAMES
+2fa6019c4189   debian    "bash"    6 minutes ago   Up 10 seconds             magical_dijkstra
 ```
 
 7. Stop the container and delete the container. What happened to your helloworld.txt?
@@ -353,11 +367,25 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker rm romantic_jackson
 ```
-
+The helloworld.txt is deleted since its in the container (magical_dijkstra) that was also deleted.
+```bash 
+@Islahazim ➜ /workspaces/NatSysProject (main) $ docker stop magical_dijkstra
+magical_dijkstra
+@Islahazim ➜ /workspaces/NatSysProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                        PORTS     NAMES
+2fa6019c4189   debian    "bash"    12 minutes ago   Exited (137) 48 seconds ago             magical_dijkstra
+@Islahazim ➜ /workspaces/NatSysProject (main) $ docker rm magical_dijkstra
+magical_dijkstra
+@Islahazim ➜ /workspaces/NatSysProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+@Islahazim ➜ /workspaces/NatSysProject (main) $ docker exec -i -t magical_dijkstra /bin/bash
+Error response from daemon: No such container: magical_dijkstra
+```
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
+1. Are files in the container persistent. Why not?. ***(1 mark)*** This is because Docker containers are designed to be ephemeral and their primary purpose is to run processes in isolation, not to serve as permanent storage.
+
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** Yes it can run multiple instances of debian result since each instace will run in its own isolated container, and start as many containers as your system resources allow.
 
 ## Running your own container with persistent storage
 
