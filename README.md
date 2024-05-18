@@ -411,7 +411,24 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 sudo chown -R codespace:codespace myroot
 
 ```
-*** __Fill answer here__.***
+```bash
+@Islahazim ➜ /workspaces/NatSysProject (main) $ cd myroot/
+@Islahazim ➜ /workspaces/NatSysProject/myroot (main) $ ll
+total 8
+drwxrwxrwx+ 2 codespace codespace 4096 May 18 05:22 ./
+drwxrwxrwx+ 5 codespace root      4096 May 18 05:22 ../
+@Islahazim ➜ /workspaces/NatSysProject/myroot (main) $ sudo chown -R codespace:codespace /workspaces/NatSysProject/myroot
+@Islahazim ➜ /workspaces/NatSysProject (main) $ cd ..
+@Islahazim ➜ /workspaces/NatSysProject (main) $ sudo chown -R codespace:codespace myroot
+@Islahazim ➜ /workspaces/NatSysProject (main) $ ll
+total 44
+drwxrwxrwx+ 5 codespace root       4096 May 18 05:22 ./
+drwxr-xrwx+ 6 codespace root       4096 May 18 05:22 ../
+drwxrwxrwx+ 9 codespace root       4096 May 18 05:15 .git/
+-rw-rw-rw-  1 codespace root      24347 May 18 05:45 README.md
+drwxrwxrwx+ 2 codespace root       4096 May 18 03:38 images/
+drwxrwxrwx+ 2 codespace codespace  4096 May 18 05:22 myroot/
+```
 
 ## You are on your own, create your own static webpage
 
