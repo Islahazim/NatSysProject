@@ -4,7 +4,7 @@ Group Name: __Fill your team name__.
 
 Team Mates:
 1. Muhammad Islahuddin bin Mohamad Azim 2118177
-2. __Fill name__ and __matric no__
+2. Muhammad Syazwan bin Mohd Saparina 2113667
 3. __Fill name__ and __matric no__
 
 ## Rules
